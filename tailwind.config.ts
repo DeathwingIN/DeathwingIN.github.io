@@ -28,20 +28,20 @@ const config = {
     extend: {
       colors: {
         black: {
-          DEFAULT: "#212A31",
-          100: "#3D52A0",
-          200: "rgba(17, 25, 40, 0.75)",
-          300: "rgba(255, 255, 255, 0.125)",
+          DEFAULT: "#040c36",
+          100: "#020613",
+          200: "rgba(8,5,107,0.75)",
+          300: "rgba(6,133,155,0.12)",
         },
         white: {
           DEFAULT: "#FFF",
-          100: "#BEC1DD",
-          200: "#C1C2D3",
+          100: "#3139e0",
+          200: "#D3D9D4",
         },
         blue: {
-          "100": "#CBACF9",
+          "100": "#d8f4fc",
         },
-        purple: "#A5DEF1",
+        purple: "#2E3944",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
