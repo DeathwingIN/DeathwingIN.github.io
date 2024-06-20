@@ -11,6 +11,7 @@ import Experience from "@/components/Experience";
 import RecentProjects from "@/components/RecentProjects";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import {Skills} from "@/components/Skills";
+import {HeroParallaxDemo} from "@/components/Projects";
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
         <FloatingNav navItems={navItems} />
         <Hero />
         <Skills />
+        <HeroParallaxDemo />
         <RecentProjects />
         <Clients />
         <Experience />
