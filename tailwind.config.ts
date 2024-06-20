@@ -28,7 +28,7 @@ const config = {
     extend: {
       colors: {
         black: {
-          DEFAULT: "#040c36",
+          DEFAULT: "#000513",
           100: "#020613",
           200: "rgba(8,5,107,0.75)",
           300: "rgba(6,133,155,0.12)",

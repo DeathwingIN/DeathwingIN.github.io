@@ -2,7 +2,8 @@ import {FaLocationArrow} from "react-icons/fa6";
 import MagicButton from "./MagicButton";
 import {Spotlight} from "./ui/Spotlight";
 import {TextGenerateEffect} from "./ui/TextGenerateEffect";
-import {LampDemo} from "./ui/lamp"
+import {motion} from "framer-motion";
+import Image from 'next/image';
 import {AtSign, Github, Linkedin} from "lucide-react";
 import Link from "next/link";
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "./ui/animated-tooltip";
@@ -10,7 +11,7 @@ import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "./ui/ani
 
 const Hero = () => {
     return (
-        <div className="pb-20 pt-36">
+        <div className="pb-5 pt-36">
             <div>
                 <Spotlight className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen" fill="white"/>
                 <Spotlight className="h-[80vh] w-[50vw] top-10 left-full" fill="purple"/>
@@ -24,11 +25,28 @@ const Hero = () => {
                     className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"/>
             </div>
             <header id="hero"
-                    className="flex flex-col sm:flex-row h-screen w-full justify-center items-center gap-4 mt-16 relative">
-                <div className="flex  w-full ">
-                    <LampDemo/>
+                    className="flex flex-col sm:flex-row h-screen w-full justify-center items-center gap-4 mt-16 relative ">
+                <div
+                    className="flex h-screen w-full items-center justify-center flex lg:-mt-[350px] md:-mt-[420px] z-10 shadow-xl">
+                    <motion.h1
+                        initial={{opacity: 0.5, y: 100}}
+                        whileInView={{opacity: 1, y: 0}}
+                        transition={{
+                            delay: 0.3,
+                            duration: 0.8,
+                            ease: "easeInOut",
+                        }}
+                    >
+                        <Image
+                            src="/Me.png"
+                            alt="Profile Image"
+                            width={600}
+                            height={600}
+                            className="shadow-lg"
+                        />
+                    </motion.h1>
                 </div>
-                <div className="flex flex-col gap-2 w-full  h-screen lg:mt-[120px] md:mt-0">
+                <div className="flex flex-col gap-2 w-full  h-screen lg:mt-[120px]">
                     <div>
                         <TextGenerateEffect
                             words="🚀 Full Stack Developer | Software Engineer in Training | Tech Enthusiast 🌐 | DevOps & Cloud Computing Passionate ☁️"
@@ -42,14 +60,17 @@ const Hero = () => {
                             projects to see my work!
                         </p>
                     </div>
-                    <div className="flex gap-4 mb-[120px]">
+                    <div className="flex gap-4 ">
                         <TooltipProvider>
                             <div>
                                 <Tooltip>
                                     <TooltipTrigger asChild>
                                         <Link href="https://www.linkedin.com/in/imesh-nirmal/" target="_blank">
                                             <div>
-                                                <Linkedin/>
+                                                <button
+                                                    className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+                                                    <Linkedin/>
+                                                </button>
                                             </div>
                                         </Link>
                                     </TooltipTrigger>
@@ -62,9 +83,10 @@ const Hero = () => {
                                 <Tooltip>
                                     <TooltipTrigger asChild>
                                         <Link href="https://github.com/DeathwingIN" target="_blank">
-                                            <div size="icon">
+                                            <button
+                                                className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
                                                 <Github/>
-                                            </div>
+                                            </button>
                                         </Link>
                                     </TooltipTrigger>
                                     <TooltipContent>
@@ -75,10 +97,11 @@ const Hero = () => {
                             <div>
                                 <Tooltip>
                                     <TooltipTrigger asChild>
-                                        <Link href="mailto:daniel01.jonathan@gmail.com" target="_blank">
-                                            <div size="icon">
+                                        <Link href="mailto:imeshnirmal1u@gmail.com" target="_blank">
+                                            <button
+                                                className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
                                                 <AtSign/>
-                                            </div>
+                                            </button>
                                         </Link>
                                     </TooltipTrigger>
                                     <TooltipContent>
