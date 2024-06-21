@@ -50,7 +50,7 @@ const Hero = () => {
                         </div>
                         <div>
                             <p className="text-left md:tracking-wider mb-4 text-sm md:text-lg lg:text-1xl">
-                                I&apos;m a passionate and creative undergraduate looking for an internship in fullstack development and software engineering. In addition to my professional experience, I've been freelancing for the past few years as a video editor and WordPress developer. Let's connect! I'm always excited about new opportunities and challenges that push boundaries.
+                                I&apos;m a passionate and creative undergraduate looking for an internship in fullstack development and software engineering. In addition to my professional experience, I&apos;ve been freelancing for the past few years as a video editor and WordPress developer. Let&apos;s connect! I&apos;m always excited about new opportunities and challenges that push boundaries.
                             </p>
                         </div>
                         <div className="flex gap-4">
