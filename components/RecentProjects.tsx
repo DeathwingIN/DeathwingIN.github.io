@@ -1,84 +1,106 @@
 "use client";
 
-import { FaLocationArrow } from "react-icons/fa6";
+import {FaLocationArrow} from "react-icons/fa6";
 
-import { projects } from "@/data";
-import { PinContainer } from "./ui/Pin";
+import {projects} from "@/data";
+import {PinContainer} from "./ui/Pin";
 
 const RecentProjects = () => {
-  return (
-    <section id="Projects">
-        <div className="py-20" id={"projects"}>
-            <h2 className="scroll-m-20 text-3xl font-extrabold tracking-tight lg:text-4xl text-center ">
-                Recent Projects
-            </h2>
-            <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
-                {projects.map((item) => (
-                    <div
-                        className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
-                        key={item.id}
-                    >
-                        <PinContainer
-                            title="/ui.aceternity.com"
-                            href="https://twitter.com/mannupaaji"
+    return (
+        <section id="Projects">
+            <div className="py-20" id={"projects"}>
+                <h2 className="scroll-m-20 text-3xl font-extrabold tracking-tight lg:text-4xl text-center">
+                    Recent Projects
+                </h2>
+                <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
+                    {projects.map((item) => (
+                        <div
+                            className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
+                            key={item.id}
                         >
-                            <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
-                                <div
-                                    className="relative w-full h-full overflow-hidden lg:rounded-3xl"
-                                    style={{ backgroundColor: "#13162D" }}
-                                >
-                                    <img src="/bg.png" alt="bgimg" />
-                                </div>
-                                <img
-                                    src={item.img}
-                                    alt="cover"
-                                    className="z-10 absolute bottom-0"
-                                />
-                            </div>
-
-                            <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
-                                {item.title}
-                            </h1>
-
-                            <p
-                                className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2"
-                                style={{
-                                    color: "#BEC1DD",
-                                    margin: "1vh 0",
-                                }}
+                            <PinContainer
+                                title={item.title}
+                                href={item.link}
                             >
-                                {item.des}
-                            </p>
+                                <div
+                                    className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
+                                    <div
+                                        className="relative w-full h-full overflow-hidden lg:rounded-3xl"
+                                        style={{backgroundColor: "#13162D"}}
+                                    >
+                                        <img src="/bg.png" alt="bgimg"/>
+                                    </div>
+                                    <img
+                                        src={item.img}
+                                        alt="cover"
+                                        className="z-10 absolute bottom-0"
+                                    />
+                                </div>
 
-                            <div className="flex items-center justify-between mt-7 mb-3">
-                                <div className="flex items-center">
-                                    {item.iconLists.map((icon, index) => (
-                                        <div
-                                            key={index}
-                                            className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
-                                            style={{
-                                                transform: `translateX(-${5 * index + 2}px)`,
-                                            }}
+                                <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
+                                    {item.title}
+                                </h1>
+
+                                <p
+                                    className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2"
+                                    style={{
+                                        color: "#BEC1DD",
+                                        margin: "1vh 0",
+                                    }}
+                                >
+                                    {item.des}
+                                </p>
+
+                                <div className="flex items-center justify-between mt-7 mb-3">
+                                    <div className="flex items-center">
+                                        {item.iconLists.map((icon, index) => (
+                                            <div
+                                                key={index}
+                                                className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
+                                                style={{
+                                                    transform: `translateX(-${5 * index + 2}px)`,
+                                                }}
+                                            >
+                                                <img src={icon} alt={`icon${index}`} className="p-2"/>
+                                            </div>
+                                        ))}
+                                    </div>
+
+                                    <div className="flex justify-center items-center">
+                                        <a
+                                            href={item.link}
+                                            className="flex lg:text-xl md:text-xs text-sm text-purple items-center"
+                                            target="_blank"
                                         >
-                                            <img src={icon} alt="icon5" className="p-2" />
-                                        </div>
-                                    ))}
-                                </div>
 
-                                <div className="flex justify-center items-center">
-                                    <p className="flex lg:text-xl md:text-xs text-sm text-purple">
-                                        Check Live Site
-                                    </p>
-                                    <FaLocationArrow className="ms-3" color="#CBACF9" />
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="35"
+                                                height="35"
+                                                viewBox="0 0 300 150"
+                                            >
+                                                <path
+                                                    fill="#f9f9f9"
+                                                    strokeMiterlimit="10"
+                                                    d="M17.791 46.836A1.999 1.999 0 0019 45v-5.4c0-.197.016-.402.041-.61A.611.611 0 0119 39h-3.6c-1.5 0-2.8-.6-3.4-1.8-.7-1.3-1-3.5-2.8-4.7-.3-.2-.1-.5.5-.5.6.1 1.9.9 2.7 2 .9 1.1 1.8 2 3.4 2 2.487 0 3.82-.125 4.622-.555C21.356 34.056 22.649 33 24 33v-.025c-5.668-.182-9.289-2.066-10.975-4.975-3.665.042-6.856.405-8.677.707a21.537 21.537 0 01-.151-.987c1.797-.296 4.843-.647 8.345-.714a8.162 8.162 0 01-.291-.849c-3.511-.178-6.541-.039-8.187.097-.02-.332-.047-.663-.051-.999 1.649-.135 4.597-.27 8.018-.111a9.832 9.832 0 01-.13-1.543c0-1.7.6-3.5 1.7-5-.5-1.7-1.2-5.3.2-6.6 2.7 0 4.6 1.3 5.5 2.1C21 13.4 22.9 13 25 13c2.1 0 4 .4 5.6 1.1.9-.8 2.8-2.1 5.5-2.1 1.5 1.4.7 5 .2 6.6 1.1 1.5 1.7 3.2 1.6 5 0 .484-.045.951-.11 1.409 3.499-.172 6.527-.034 8.204.102-.002.337-.033.666-.051.999-1.671-.138-4.775-.28-8.359-.089a8.272 8.272 0 01-.325.98c3.546.046 6.665.389 8.548.689-.043.332-.093.661-.151.987-1.912-.306-5.171-.664-8.879-.682-1.665 2.878-5.22 4.755-10.777 4.974V33c2.6 0 5 3.9 5 6.6V45c0 .823.498 1.53 1.209 1.836C41.37 43.804 48 35.164 48 25 48 12.318 37.683 2 25 2S2 12.318 2 25c0 10.164 6.63 18.804 15.791 21.836z"
+                                                    fontFamily="none"
+                                                    fontSize="none"
+                                                    fontWeight="none"
+                                                    textAnchor="none"
+                                                    transform="scale(5.12)"
+                                                ></path>
+                                            </svg>
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                        </PinContainer>
-                    </div>
-                ))}
+                            </PinContainer>
+                        </div>
+                    ))}
+                </div>
             </div>
-        </div>
-    </section>
-  );
+        </section>
+
+    );
 };
 
 export default RecentProjects;

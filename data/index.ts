@@ -1,6 +1,9 @@
 import { CiHome } from "react-icons/ci";
 import React from "react";
 
+//Icons
+
+
 
 
 export const navItems = [
@@ -17,27 +20,31 @@ export const navItems = [
 export const projects = [
   {
     id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "/ui.earth.com",
+    title: "Sinhala OCR System",
+    des: "Sinhala OCR is a project that takes images containing Sinhala font and converts them into \n" +
+        "editable text",
+    img: "https://placehold.co/600x400",
+    iconLists: ["./react.png","./css.png",'./fastapi.svg','./firebase.png'],
+    link: "https://github.com/DeathwingIN/capstone_project_sinhalaOCR",
   },
-  {
+{
     id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "/ui.yoom.com",
+    title: "Surasa ",
+    des: "The Surasa Restaurant Management Website is designed for the Faculty of Agricultural\n" +
+        "Sciences at Sabaragamuwa University of Sri Lanka.",
+    img: "https://placehold.co/600x400",
+    iconLists: ["./react.png","figma.png","tailwind.png","php.png","framermotion.svg","laravel.svg","mysql.png",],
+    link: "https://github.com/DeathwingIN/Surasa-Dev",
   },
-  {
+{
     id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "/ui.aiimg.com",
+    title: "Portfolio ",
+    des: "My portfolio website serves as a digital showcase of my skills, achievements, and projects,\n" +
+        "providing a comprehensive overview of my professional journey",
+    img: "portfolio.png",
+    iconLists: ["./react.png","nextjs.svg","js.svg","acertinity.png","framermotion.svg","tailwind.png",],
+    link: "https://imeshnirmal.me/",
   },
+
 
 ];
