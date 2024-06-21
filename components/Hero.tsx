@@ -11,7 +11,7 @@ import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "./ui/ani
 
 const Hero = () => {
     return (
-        <div className="pb-5 pt-36">
+        <div className=" pt-36">
             <div>
                 <Spotlight className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen" fill="white"/>
                 <Spotlight className="h-[80vh] w-[50vw] top-10 left-full" fill="purple"/>
@@ -20,7 +20,7 @@ const Hero = () => {
 
 
             <div
-                className="h-screen w-full dark:bg-black-100 bg-white dark:bg-grid-white/[0.03] bg-grid-black-100/[0.2] absolute top-0 left-0 flex items-center justify-center">
+                className=" w-full h-screen dark:bg-black-100 bg-white dark:bg-grid-white/[0.03] bg-grid-black-100/[0.2] absolute top-0 left-0 flex items-center justify-center">
                 <div
                     className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"/>
             </div>
@@ -49,15 +49,15 @@ const Hero = () => {
                 <div className="flex flex-col gap-2 w-full  h-screen lg:mt-[120px]">
                     <div>
                         <TextGenerateEffect
-                            words="🚀 Full Stack Developer | Software Engineer in Training | Tech Enthusiast 🌐 | DevOps & Cloud Computing Passionate ☁️"
+                            words="Hi, I'm Imesh Nirmal Full Stack Developer | Software Engineer  | Tech Enthusiast ☁️"
                             className="text-center text-[20px] md:text-2xl lg:text-5xl"/>
                     </div>
                     <div>
                         <p className="text-left md:tracking-wider mb-4 text-sm md:text-lg lg:text-1xl">
-                            Hi! I&apos;m Imesh Nirmal, an undergraduate seeking a software engineering internship.
-                            Skilled in Java, JavaScript, React, and Angular. Known for timely task completion, teamwork,
-                            and strong analytical skills. Passionate about DevOps and cloud computing. Explore my
-                            projects to see my work!
+                            I'm a passionate and creative undergraduate who looking for intern,  in
+                            fullstack development and software engineering In
+                            addition to my professional experience, I've been freelancing for the past years as video editor and wordpress developer.
+                            let's connect! I'm always excited about new opportunities and challenges that push the boundaries.
                         </p>
                     </div>
                     <div className="flex gap-4 ">
