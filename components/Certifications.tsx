@@ -7,14 +7,14 @@ export function Certifications() {
     return (
         <div className="rounded-md flex flex-col  items-center justify-center relative overflow-hidden ">
 
-            <h2 className="scroll-m-20 text-3xl font-extrabold tracking-tight lg:text-4xl text-center ">
+            <h2 className="scroll-m-20 text-3xl font-extrabold tracking-tight lg:text-4xl text-center mb-[80px] ">
                 Licence and Certifications
             </h2>
             <InfiniteMovingCards
                 items={certifications}
                 direction="right"
                 speed="fast"
-                clsssName={"mt-10"}
+
             />
         </div>
     );
@@ -22,7 +22,7 @@ export function Certifications() {
 
 const certifications = [
     {
-        title: "React Developer",
+        title: "",
         image: "https://images.credly.com/size/340x340/images/af8c6b4e-fc31-47c4-8dcb-eb7a2065dc5b/I2CS__1_.png",
         link: "https://example.com/react-certification",
     },
@@ -33,7 +33,7 @@ const certifications = [
     },
     {
         title: "CSS Wizard",
-        image: "/images/css-certification.jpg",
+        image: "https://images.credly.com/size/340x340/images/42326d44-14ff-4eda-b9c5-7d8f12919253/image.png",
         link: "https://example.com/css-certification",
     },
     {
