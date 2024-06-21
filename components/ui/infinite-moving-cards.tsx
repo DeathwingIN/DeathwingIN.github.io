@@ -116,6 +116,7 @@ export const InfiniteMovingCards = ({
                                 <img
                                     src={item.image}
                                     alt={item.title}
+
                                     style={{
                                         width: "100%", // Ensure the image fills its container
                                         height: "100%", // Ensure the image fills its container
