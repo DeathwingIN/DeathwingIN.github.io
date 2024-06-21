@@ -21,15 +21,15 @@ const ContactMe = () => {
     };
 
     return (
-        <section className={ "mt-10"}>
+        <section className={ "mt-16 pt-10"} id={"contact"}>
             <h1 className="scroll-m-20 text-3xl font-extrabold tracking-tight lg:text-4xl text-center ">
-                Skills & Tools
+                Contact Me
             </h1>
-            <p className="leading-7 text-center">
-                My primary focus lies in frontend development and backend development and Learning Every Day
+            <p className="leading-7 text-center pt-10">
+               Just fill in the form below and I will get back to you as soon as possible
             </p>
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-2  relative">
-                <div className="flex-3 md:flex-1">
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-2  relative ">
+                <div className="flex-3 md:flex-1 ">
                     <motion.h1
                         initial={{opacity: 0.5, y: 100}}
                         whileInView={{opacity: 1, y: 0}}
@@ -80,12 +80,10 @@ const ContactMe = () => {
                     </motion.h1>
 
                 </div>
-                <div className="hidden sm:flex flex-1 w-1/4">
+                <div className="hidden sm:flex flex-1 w-1/4 -mt-[95px]">
                     <GlobeDemo/>
                 </div>
             </div>
-
-
         </section>
 
 

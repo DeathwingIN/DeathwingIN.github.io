@@ -1,13 +1,17 @@
 import Image from "next/image";
 import {Reveal} from "./ui/Reveal";
+import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+
+import React from 'react';
+import PropTypes from 'prop-types';
 
 // Individual component for displaying each category
-const Category = ({title, items}) => (
+const Category = ({ title, items }) => (
     <div className="flex flex-col gap-2 mb-5">
         <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">{title}</h3>
         <div className="flex flex-row flex-wrap gap-4">
-            {items.map((item, index) => (
-                <div key={index} className="flex flex-col items-center justify-center">
+            {items.map((item) => (
+                <div key={item.id} className="flex flex-col items-center justify-center">
                     <span className="mt-5 mb-2">{item.icon}</span>
                     <p className="text-sm text-muted-foreground">{item.name}</p>
                 </div>
@@ -15,6 +19,20 @@ const Category = ({title, items}) => (
         </div>
     </div>
 );
+
+Category.propTypes = {
+    title: PropTypes.string.isRequired,
+    items: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+            icon: PropTypes.element.isRequired,
+            name: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+};
+
+export default React.memo(Category);
+
 
 
 export const Skills = () => {
@@ -681,12 +699,13 @@ export const Skills = () => {
 
     return (
         <section id="skills" className="flex flex-col items-left justify-center gap-5 mb-10">
-            <h2 className="scroll-m-20 text-3xl font-extrabold tracking-tight lg:text-4xl text-center ">
-                Skills & Tools
+            <h2 className="scroll-m-20 text-3xl font-extrabold tracking-tight lg:text-4xl text-center">
+                Skills & Learning
             </h2>
-            <p className="leading-7 text-center">
-                My primary focus lies in frontend development and backend development and Learning Every Day
+            <p className="leading-7 text-center px-10 sm:px-20 md:px-20 lg:px-20 xl:px-[120px] mb-10">
+                I am proficient in frontend and backend development, with skills in technologies like React and Node.js. Currently, I am actively learning new tools and techniques to enhance my expertise.
             </p>
+
 
             <div
                 className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-4 items-start lg:mx-[100px]">

@@ -5,18 +5,21 @@ import { InfiniteMovingCards } from "../components/ui/infinite-moving-cards";
 
 export function Certifications() {
     return (
-        <div className="rounded-md flex flex-col  items-center justify-center relative overflow-hidden ">
+       <section id={"certification"}>
 
-            <h2 className="scroll-m-20 text-3xl font-extrabold tracking-tight lg:text-4xl text-center mb-[80px] ">
-                Licence and Certifications
-            </h2>
-            <InfiniteMovingCards
-                items={certifications}
-                direction="right"
-                speed="fast"
+           <div className="rounded-md flex flex-col  items-center justify-center relative overflow-hidden mt-16 pt-10 ">
 
-            />
-        </div>
+               <h2 className="scroll-m-20 text-3xl font-extrabold tracking-tight lg:text-4xl text-center mb-[80px] ">
+                   Licence and Certifications
+               </h2>
+               <InfiniteMovingCards
+                   items={certifications}
+                   direction="right"
+                   speed="fast"
+
+               />
+           </div>
+       </section>
     );
 }
 
