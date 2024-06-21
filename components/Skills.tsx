@@ -30,21 +30,18 @@ const Category: React.FC<CategoryProps> = ({ title, items }) => (
     </div>
 );
 
-
 Category.propTypes = {
     title: PropTypes.string.isRequired,
     items: PropTypes.arrayOf(
         PropTypes.shape({
             id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-            icon: PropTypes.element.isRequired,
+            icon: PropTypes.node.isRequired, // Changed from PropTypes.element to PropTypes.node
             name: PropTypes.string.isRequired,
-        })
+        }).isRequired // Ensure each shape is required
     ).isRequired,
 };
 
 export default React.memo(Category);
-
-
 
 export const Skills = () => {
     const categories = [
