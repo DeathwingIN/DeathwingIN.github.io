@@ -5,8 +5,18 @@ import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// Individual component for displaying each category
-const Category = ({ title, items }) => (
+// Define the interface for the props
+interface CategoryProps {
+    title: string;
+    items: {
+        id: number | string;
+        icon: React.ReactNode;
+        name: string;
+    }[];
+}
+
+// Define the Category component with typed props
+const Category: React.FC<CategoryProps> = ({ title, items }) => (
     <div className="flex flex-col gap-2 mb-5">
         <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">{title}</h3>
         <div className="flex flex-row flex-wrap gap-4">
@@ -19,6 +29,7 @@ const Category = ({ title, items }) => (
         </div>
     </div>
 );
+
 
 Category.propTypes = {
     title: PropTypes.string.isRequired,
