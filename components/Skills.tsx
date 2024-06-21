@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 interface CategoryProps {
     title: string;
     items: {
-        id: number | string;
+
         icon: React.ReactNode;
         name: string;
     }[];
@@ -34,7 +34,7 @@ Category.propTypes = {
     title: PropTypes.string.isRequired,
     items: PropTypes.arrayOf(
         PropTypes.shape({
-            id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+
             icon: PropTypes.node.isRequired, // Changed from PropTypes.element to PropTypes.node
             name: PropTypes.string.isRequired,
         }).isRequired // Ensure each shape is required
