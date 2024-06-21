@@ -27,7 +27,7 @@ const Hero = () => {
             <header id="hero"
                     className="flex flex-col sm:flex-row h-screen w-full justify-center items-center gap-4 mt-16 relative ">
                 <div
-                    className="flex h-screen w-full items-center justify-center flex lg:-mt-[350px] md:-mt-[420px] z-10 shadow-xl">
+                    className="flex h-screen w-full items-center justify-center  lg:-mt-[350px] md:-mt-[420px] z-10 shadow-xl">
                     <motion.h1
                         initial={{opacity: 0.5, y: 100}}
                         whileInView={{opacity: 1, y: 0}}

@@ -7,6 +7,7 @@ import RecentProjects from "@/components/RecentProjects";
 import {FloatingNav} from "@/components/ui/FloatingNavbar";
 import {Skills} from "@/components/Skills";
 import {Certifications} from "@/components/Certifications";
+import ContactMe from "@/components/ContactMe";
 
 
 const Home = () => {
@@ -19,6 +20,8 @@ const Home = () => {
                 <Skills/>
                 <RecentProjects/>
                 <Certifications/>
+                <ContactMe/>
+
                 <Footer/>
             </div>
         </main>
