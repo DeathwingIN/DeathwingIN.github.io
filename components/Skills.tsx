@@ -1,6 +1,6 @@
 import Image from "next/image";
 import {Reveal} from "./ui/Reveal";
-import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+import {TextGenerateEffect} from "./ui/TextGenerateEffect";
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -9,14 +9,14 @@ import PropTypes from 'prop-types';
 interface CategoryProps {
     title: string;
     items: {
-
+        id: number | string;
         icon: React.ReactNode;
         name: string;
     }[];
 }
 
 // Define the Category component with typed props
-const Category: React.FC<CategoryProps> = ({ title, items }) => (
+const Category: React.FC<CategoryProps> = ({title, items}) => (
     <div className="flex flex-col gap-2 mb-5">
         <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">{title}</h3>
         <div className="flex flex-row flex-wrap gap-4">
@@ -34,7 +34,7 @@ Category.propTypes = {
     title: PropTypes.string.isRequired,
     items: PropTypes.arrayOf(
         PropTypes.shape({
-
+            id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
             icon: PropTypes.node.isRequired, // Changed from PropTypes.element to PropTypes.node
             name: PropTypes.string.isRequired,
         }).isRequired // Ensure each shape is required
@@ -49,7 +49,9 @@ export const Skills = () => {
             title: 'Languages 👨🏻‍💻',
             items: [
                 {
-                    name: 'JavaScript', icon: <svg
+                    id: 1,
+                    name: 'JavaScript',
+                    icon: <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="50"
                         height="50"
@@ -62,6 +64,7 @@ export const Skills = () => {
                     </svg>
                 },
                 {
+                    id: 2,
                     name: 'TypeScript',
                     icon: <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" preserveAspectRatio="xMidYMid"
                                viewBox="0 0 256 256">
@@ -71,6 +74,7 @@ export const Skills = () => {
                     </svg>
                 },
                 {
+                    id: 3,
                     name: 'Java', icon: <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="50"
@@ -101,6 +105,7 @@ export const Skills = () => {
                     </svg>
                 }, // Add icon if available
                 {
+                    id: 4,
                     name: 'PHP', icon: <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="50"
@@ -134,6 +139,7 @@ export const Skills = () => {
                     </svg>
                 }, // Add icon if available
                 {
+                    id: 5,
                     name: 'C#', icon: <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="50"
@@ -166,7 +172,8 @@ export const Skills = () => {
         {
             title: 'Backend (Technologies and Frameworks) 👨🏻‍💻',
             items: [
-                {
+                {   id: 1,
+
                     name: 'Node.js', icon: <svg
                         xmlns="http://www.w3.org/2000/svg"
                         xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -340,6 +347,7 @@ export const Skills = () => {
                     </svg>
                 }, // Add icon if available
                 {
+                    id: 2,
                     name: 'Spring Boot',
                     icon: <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50"
                                viewBox="0 0 48 48">
@@ -350,6 +358,7 @@ export const Skills = () => {
                     </svg>
                 }, // Add icon if available
                 {
+                    id: 3,
                     name: 'Laravel', icon: <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="50"
@@ -365,9 +374,12 @@ export const Skills = () => {
             ]
         },
         {
+
             title: 'Databases 👨🏻‍💻',
             items: [
                 {
+
+                    id: 1,
                     name: 'MySQL', icon: <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="50"
@@ -396,6 +408,7 @@ export const Skills = () => {
                     </svg>
                 }, // Add icon if available
                 {
+                    id: 2,
                     name: 'Microsoft SQL Server', icon: <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="50"
@@ -456,6 +469,7 @@ export const Skills = () => {
                     </svg>
                 }, // Add icon if available
                 {
+                    id: 3,
                     name: 'MongoDB', icon: <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="50"
@@ -498,6 +512,7 @@ export const Skills = () => {
             title: 'Cloud Platforms 👨🏻‍💻',
             items: [
                 {
+                    id: 1,
                     name: 'AWS',
                     icon: <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50"
                                viewBox="0 0 48 48">
@@ -508,6 +523,7 @@ export const Skills = () => {
                     </svg>
                 }, // Add icon if available
                 {
+                    id: 2,
                     name: 'Azure',
                     icon: <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50"
                                viewBox="0 0 48 48">
@@ -516,6 +532,7 @@ export const Skills = () => {
                     </svg>
                 }, // Add icon if available
                 {
+                    id: 3,
                     name: 'GCP',
                     icon: <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50"
                                viewBox="0 0 48 48">
@@ -544,6 +561,7 @@ export const Skills = () => {
             title: 'Frontend (Technologies and Libraries) 👨🏻‍💻',
             items: [
                 {
+                    id: 1,
                     name: 'HTML',
                     icon: <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50"
                                viewBox="0 0 48 48">
@@ -556,6 +574,7 @@ export const Skills = () => {
                     </svg>
                 }, // Add icon if available
                 {
+                    id: 2,
                     name: 'CSS',
                     icon: <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50"
                                viewBox="0 0 100 100">
@@ -580,6 +599,7 @@ export const Skills = () => {
                     </svg>
                 }, // Add icon if available
                 {
+                    id: 3,
                     name: 'React',
                     icon: <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50"
                                viewBox="0 0 40 40">
@@ -604,6 +624,7 @@ export const Skills = () => {
                     </svg>
                 }, // Add icon if available
                 {
+                    id: 4,
                     name: 'Angular',
                     icon: <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50"
                                viewBox="0 0 48 48">
@@ -619,6 +640,7 @@ export const Skills = () => {
                     </svg>
                 }, // Add icon if available
                 {
+                    id: 5,
                     name: 'Next.js',
                     icon: <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50"
                                viewBox="0 0 48 48">
@@ -650,6 +672,7 @@ export const Skills = () => {
                     </svg>
                 }, // Add icon if available
                 {
+                    id: 6,
                     name: 'Bootstrap',
                     icon: <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50"
                                viewBox="0 0 48 48">
@@ -660,6 +683,7 @@ export const Skills = () => {
                     </svg>
                 }, // Add icon if available
                 {
+                    id: 7,
                     name: 'Tailwind CSS',
                     icon: <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50"
                                viewBox="0 0 48 48">
@@ -668,6 +692,7 @@ export const Skills = () => {
                     </svg>
                 }, // Add icon if available
                 {
+                    id: 8,
                     name: 'Material-UI', icon: <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="50"
@@ -687,6 +712,7 @@ export const Skills = () => {
                     </svg>
                 }, // Add icon if available
                 {
+                    id: 9,
                     name: 'Ionic', icon: <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="50"
@@ -711,7 +737,8 @@ export const Skills = () => {
                 Skills & Learning
             </h2>
             <p className="leading-7 text-center px-10 sm:px-20 md:px-20 lg:px-20 xl:px-[120px] mb-10">
-                I am proficient in frontend and backend development, with skills in technologies like React and Node.js. Currently, I am actively learning new tools and techniques to enhance my expertise.
+                I am proficient in frontend and backend development, with skills in technologies like React and Node.js.
+                Currently, I am actively learning new tools and techniques to enhance my expertise.
             </p>
 
 
