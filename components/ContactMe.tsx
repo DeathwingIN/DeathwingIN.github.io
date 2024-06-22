@@ -41,11 +41,10 @@ const ContactMe = () => {
                         className="relative max-w-md w-full h-full mx-auto rounded-none md:rounded-2xl shadow-input bg-white dark:bg-black xl:mt-[200px] z-20"
                     >
                         <p className="font-bold text-xl text-neutral-800 dark:text-neutral-200 text-center">
-                            Welcome to Aceternity
+                            Send A Message
                         </p>
                         <p className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300   pl-4 ">
-                            Login to aceternity if you can because we don&apos;t have a login flow
-                            yet
+
                         </p>
                         <form onSubmit={handleSubmit} className="relative z-30 p-4 md:p-8 ">
                             <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
@@ -62,9 +61,9 @@ const ContactMe = () => {
                                 <Label htmlFor="email">Email Address</Label>
                                 <Input id="email" placeholder="projectmayhem@fc.com" type="email"/>
                             </LabelInputContainer>
-                            <LabelInputContainer className="mb-4">
-                                <Label htmlFor="confirmEmail">Confirm Email Address</Label>
-                                <Input id="confirmEmail" placeholder="projectmayhem@fc.com" type="email"/>
+                            <LabelInputContainer className="mb-2 ">
+                                <Label htmlFor="confirmEmail">Message</Label>
+                                <Input id="confirmEmail" placeholder="Message Here" type="email" />
                             </LabelInputContainer>
 
 

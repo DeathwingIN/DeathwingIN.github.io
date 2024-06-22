@@ -32,7 +32,7 @@ export const projects = [
     title: "Surasa ",
     des: "The Surasa Restaurant Management Website is designed for the Faculty of Agricultural\n" +
         "Sciences at Sabaragamuwa University of Sri Lanka.",
-    img: "https://placehold.co/600x400",
+    img: "/ocr.png",
     iconLists: ["/react.png","/figma.png","/tailwind.png","/php.png","/framermotion.svg","/laravel.svg","/mysql.png",],
     link: "https://github.com/DeathwingIN/Surasa-Dev",
   },

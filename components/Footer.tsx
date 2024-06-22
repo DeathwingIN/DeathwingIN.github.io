@@ -24,7 +24,7 @@ const Footer = () => {
                     Reach out to me today and let&apos;s discuss how I can help you
                     achieve your goals.
                 </p>
-                <a href="https://chatgpt.com" target={'blank'}>
+                <a href="https://drive.google.com/file/d/1qoNoHve23Ei0QnM-NtaS7U6N3egvIFDX/view" download>
                     <button
                         className="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-xs font-semibold leading-6  text-white inline-block">
                 <span className="absolute inset-0 overflow-hidden rounded-full">
