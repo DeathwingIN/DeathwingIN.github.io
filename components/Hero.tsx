@@ -44,12 +44,16 @@ const Hero = () => {
                     <div className="flex flex-col gap-2 w-full h-screen lg:mt-[120px]">
                         <div>
                             <TextGenerateEffect
-                                words="Hi, I'm Imesh Nirmal Full Stack Developer | Software Engineer | Tech Enthusiast ☁️"
+                                words="Hi, I'm Imesh Nirmal"
+                                className="text-center text-[20px] md:text-2xl lg:text-5xl"
+                            />
+                            <TextGenerateEffect
+                                words="Full Stack Developer | Software Engineer | Tech Enthusiast "
                                 className="text-center text-[20px] md:text-2xl lg:text-5xl"
                             />
                         </div>
                         <div>
-                            <p className="text-left md:tracking-wider mb-4 text-sm md:text-lg lg:text-1xl">
+                            <p className="text-left md:tracking-wider mb-4 text-sm md:text-lg lg:text-1xl ">
                                 I&apos;m a passionate and creative undergraduate looking for an internship in fullstack development and software engineering. In addition to my professional experience, I&apos;ve been freelancing for the past few years as a video editor and WordPress developer. Let&apos;s connect! I&apos;m always excited about new opportunities and challenges that push boundaries.
                             </p>
                         </div>
